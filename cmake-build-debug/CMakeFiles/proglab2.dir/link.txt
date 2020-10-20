@@ -1,0 +1,3 @@
+"I:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\proglab2.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\proglab2.dir/objects.a @CMakeFiles\proglab2.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\proglab2.dir/objects.a -Wl,--no-whole-archive  -o proglab2.exe -Wl,--out-implib,libproglab2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\proglab2.dir\linklibs.rsp

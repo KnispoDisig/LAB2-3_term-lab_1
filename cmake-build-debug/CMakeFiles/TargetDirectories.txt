@@ -1,0 +1,3 @@
+C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir
+C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
