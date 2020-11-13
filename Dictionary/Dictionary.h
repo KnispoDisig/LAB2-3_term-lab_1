@@ -2,34 +2,18 @@
 // Created by fell2 on 16.10.2020.
 //
 
+#include "../DictionaryTree/DictionaryTree.cpp"
+
+
 #ifndef PROGLAB2_DICTIONARY_H
 #define PROGLAB2_DICTIONARY_H
 
+#pragma once
 
 template<class Key, class Value>
 class Dictionary {
 private:
-    template<class K, class V>
-    class DictionaryTree {
-    public:
-        Key selfKey;
-        Value value;
-        DictionaryTree *next;
-
-        DictionaryTree(K key, V val, DictionaryTree<K, V> *next) {
-            this->selfKey = key;
-            this->value = val;
-            this->next = next;
-        }
-
-        DictionaryTree(DictionaryTree<K, V> &tree) {
-            this->selfKey = tree.selfKey;
-            this->value = tree.value;
-            this->next = tree.next;
-        }
-    };
-
-    DictionaryTree<Key, Value> *node;
+    DictionaryTree<Key, Value> *dictionaryTree;
 
 public:
     Dictionary();
@@ -52,8 +36,15 @@ public:
 
     Dictionary<Key, Value> *concat(Dictionary<Key, Value> *dictionary);
 
-    void print();
+    void updateValue(Key key, Value newValue);
+
+    Sequence<Key> *keyList();
+
+    Sequence<std::pair<Key, Value>> *listOfPairs();
+
+    void print(std::string order);
 };
+
 
 
 #endif //PROGLAB2_DICTIONARY_H

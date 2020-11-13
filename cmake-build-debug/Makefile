@@ -122,6 +122,33 @@ proglab2/fast:
 	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/build
 .PHONY : proglab2/fast
 
+AlphabetPointer/AlphabetPointer.obj: AlphabetPointer/AlphabetPointer.cpp.obj
+
+.PHONY : AlphabetPointer/AlphabetPointer.obj
+
+# target to build an object file
+AlphabetPointer/AlphabetPointer.cpp.obj:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj
+.PHONY : AlphabetPointer/AlphabetPointer.cpp.obj
+
+AlphabetPointer/AlphabetPointer.i: AlphabetPointer/AlphabetPointer.cpp.i
+
+.PHONY : AlphabetPointer/AlphabetPointer.i
+
+# target to preprocess a source file
+AlphabetPointer/AlphabetPointer.cpp.i:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.i
+.PHONY : AlphabetPointer/AlphabetPointer.cpp.i
+
+AlphabetPointer/AlphabetPointer.s: AlphabetPointer/AlphabetPointer.cpp.s
+
+.PHONY : AlphabetPointer/AlphabetPointer.s
+
+# target to generate assembly for a file
+AlphabetPointer/AlphabetPointer.cpp.s:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.s
+.PHONY : AlphabetPointer/AlphabetPointer.cpp.s
+
 BinTree/BinTree.obj: BinTree/BinTree.cpp.obj
 
 .PHONY : BinTree/BinTree.obj
@@ -202,6 +229,33 @@ Dictionary/Dictionary.s: Dictionary/Dictionary.cpp.s
 Dictionary/Dictionary.cpp.s:
 	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.s
 .PHONY : Dictionary/Dictionary.cpp.s
+
+DictionaryTree/DictionaryTree.obj: DictionaryTree/DictionaryTree.cpp.obj
+
+.PHONY : DictionaryTree/DictionaryTree.obj
+
+# target to build an object file
+DictionaryTree/DictionaryTree.cpp.obj:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj
+.PHONY : DictionaryTree/DictionaryTree.cpp.obj
+
+DictionaryTree/DictionaryTree.i: DictionaryTree/DictionaryTree.cpp.i
+
+.PHONY : DictionaryTree/DictionaryTree.i
+
+# target to preprocess a source file
+DictionaryTree/DictionaryTree.cpp.i:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.i
+.PHONY : DictionaryTree/DictionaryTree.cpp.i
+
+DictionaryTree/DictionaryTree.s: DictionaryTree/DictionaryTree.cpp.s
+
+.PHONY : DictionaryTree/DictionaryTree.s
+
+# target to generate assembly for a file
+DictionaryTree/DictionaryTree.cpp.s:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.s
+.PHONY : DictionaryTree/DictionaryTree.cpp.s
 
 Iterator/SeqIterator.obj: Iterator/SeqIterator.cpp.obj
 
@@ -401,6 +455,9 @@ help:
 	@echo ... proglab2
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... AlphabetPointer/AlphabetPointer.obj
+	@echo ... AlphabetPointer/AlphabetPointer.i
+	@echo ... AlphabetPointer/AlphabetPointer.s
 	@echo ... BinTree/BinTree.obj
 	@echo ... BinTree/BinTree.i
 	@echo ... BinTree/BinTree.s
@@ -410,6 +467,9 @@ help:
 	@echo ... Dictionary/Dictionary.obj
 	@echo ... Dictionary/Dictionary.i
 	@echo ... Dictionary/Dictionary.s
+	@echo ... DictionaryTree/DictionaryTree.obj
+	@echo ... DictionaryTree/DictionaryTree.i
+	@echo ... DictionaryTree/DictionaryTree.s
 	@echo ... Iterator/SeqIterator.obj
 	@echo ... Iterator/SeqIterator.i
 	@echo ... Iterator/SeqIterator.s

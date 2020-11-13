@@ -1,14 +1,14 @@
 //
 // Created by fell2 on 17.10.2020.
 //
-#include <functional>
-#include "../Dictionary/Dictionary.cpp"
-#include "../Sequence/Sequence.h"
-#include "../Sequence/ArraySequence/ArraySequence.h"
-#include "../Iterator/SeqIterator.cpp"
+#pragma once
 
 #ifndef PROGLAB2_SPARSESEQ_H
 #define PROGLAB2_SPARSESEQ_H
+
+#include <functional>
+#include "../Dictionary/Dictionary.h"
+#include "../Sequence/ArraySequence/ArraySequence.cpp"
 
 template<class T>
 class SparseSeq {

@@ -8,146 +8,138 @@
 
 template<class Key, class Value>
 Dictionary<Key, Value>::Dictionary() {
-    node = nullptr;
+    this->dictionaryTree = nullptr;
 }
 
 template<class Key, class Value>
-int Dictionary<Key, Value>::getCount() {
-    int count = 0;
-    DictionaryTree<Key, Value>* temp = node;
+Dictionary<Key, Value>::Dictionary(const Dictionary<Key,Value> &dictionary) {
+    Sequence<std::pair<Key, Value>> *sequenceTree = dictionary.dictionaryTree->thread("NLR");
 
-    while (temp != nullptr) {
-        count++;
-        temp = temp->next;
+    dictionaryTree = new DictionaryTree<Key, Value>(sequenceTree->get(0).first, sequenceTree->get(0).second);
+
+    for (int i = 1; i < sequenceTree->getLength(); i++) {
+        dictionaryTree->add(sequenceTree->get(i).first, sequenceTree->get(i).second);
     }
+}
 
-    return count;
+template<class Key, class Value>
+Sequence<std::pair<Key, Value>> *Dictionary<Key, Value>::listOfPairs() {
+    if (this->isEmpty()) {
+        return new LinkedListSequence<std::pair<Key, Value>>();
+    } else {
+        return dictionaryTree->thread("NLR");
+    }
 }
 
 template<class Key, class Value>
 bool Dictionary<Key, Value>::isEmpty() {
-    return node == nullptr;
+    return dictionaryTree == nullptr;
 }
 
 template<class Key, class Value>
 Value Dictionary<Key, Value>::get(Key key) {
-    DictionaryTree<Key, Value>* temp = node;
-    while (temp != nullptr) {
-        if (temp->selfKey == key) {
-            return temp->value;
-        }
-        temp = temp->next;
+    if (this->isEmpty()) {
+        std::cout << "Dictionary is empty\n";
+        throw std::exception();
+    } else {
+        return dictionaryTree->get(key);
     }
-
-    throw std::exception();
 }
 
 template<class Key, class Value>
 void Dictionary<Key, Value>::add(Key key, Value val) {
     if (this->isEmpty()) {
-        node = new DictionaryTree<Key, Value>(key, val, nullptr);
+        dictionaryTree = new DictionaryTree<Key, Value>(key, val);
     } else {
-        if (this->contains(key)) {
-            std::cout << "Such key already exists\n";
-            throw std::exception();
-        } else {
-            auto* newElem = new DictionaryTree<Key, Value>(key, val, nullptr);
-            DictionaryTree<Key, Value>* temp = node;
-            while (temp->next != nullptr) {
-                temp = temp->next;
-            }
-            temp->next = newElem;
-        }
+        dictionaryTree->add(key, val);
     }
 }
 
 template<class Key, class Value>
 bool Dictionary<Key, Value>::contains(Key key) {
-    DictionaryTree<Key, Value>* temp = node;
-    while (temp != nullptr) {
-        if (temp->selfKey == key) {
-            return true;
-        }
-        temp = temp->next;
+    if (this->isEmpty()) {
+        return false;
+    } else {
+        return dictionaryTree->contains(key);
     }
-    return false;
 }
 
 template<class Key, class Value>
-void Dictionary<Key, Value>::remove(Key key) {
-    if (!this->contains(key)) {
-        std::cout << "No such element with given key\n";
-        throw std::exception();
+bool Dictionary<Key, Value>::containsNullValue(bool (*isNull)(Value)) {
+    if (this->isEmpty()) {
+        return false;
+    } else {
+        return dictionaryTree->containsNullValue(isNull);
     }
-    if (this->isEmpty()) {                  // если пусто, то исключение
-        throw std::exception();
-    } else if (node->next == nullptr) {     // если только один элемент
-        if (node->selfKey == key) {         // если первый элемент совпадает
-            DictionaryTree<Key, Value>* temp = node;
-            delete node;
-            node = temp;
-        } else {                            // если нет, то исключение
-            throw std::exception();
-        }
-    } else {                                // элементов не меньше двух
-        DictionaryTree<Key, Value>* temp1 = node;
-        DictionaryTree<Key, Value>* temp2 = node->next;
+}
 
-        if (temp1->selfKey == key) {        // проверяем первый элемент отдельно
-            node = temp2;
-            delete temp1;
-        } else {                            // если не первый, идем дальше
-            while (temp2->selfKey != key && temp2 != nullptr) {    // пока не встретим элемент с нужным ключом
-                temp1 = temp1->next;
-                temp2 = temp2->next;
-            }
-            if (temp2 == nullptr) {
-                throw std::exception();
-            } else {                        // достигли положения, что temp2 указывает на найденный элемент, а temp1 на предыдущий
-                temp1->next = temp2->next;
-                delete temp2;
-            }
-        }
+template<class Key, class Value>
+int Dictionary<Key, Value>::getCount() {
+    if (this->isEmpty()) {
+        return 0;
+    } else {
+        return dictionaryTree->size();
     }
 }
 
 template<class Key, class Value>
 Dictionary<Key, Value> *Dictionary<Key, Value>::concat(Dictionary<Key, Value> *dictionary) {
-    Dictionary<Key, Value> *result = new Dictionary<Key, Value>(*this);
-    DictionaryTree<Key, Value> *temp = dictionary->node;
-
-    while (temp != nullptr) {
-        result->add(temp->selfKey, temp->value);
-        temp = temp->next;
+    if (this->isEmpty()) {
+        return dictionary;
+    }
+    if (dictionary->isEmpty()) {
+        return this;
     }
 
-    return result;
+    Sequence<std::pair<Key, Value>> *listOfCommonPairs = dictionaryTree->unitedWith(dictionary->dictionaryTree)->thread("NLR");
+    Dictionary<Key, Value> *newDictionary = new Dictionary<Key, Value>();
+
+    for (int i = 0; i < listOfCommonPairs->getLength(); i++) {
+        Key key = listOfCommonPairs->get(i).first;
+        Value value = listOfCommonPairs->get(i).second;
+        newDictionary->add(key, value);
+    }
+
+    return newDictionary;
 }
 
 template<class Key, class Value>
-void Dictionary<Key, Value>::print() {
+void Dictionary<Key, Value>::updateValue(Key key, Value newValue) {
     if (this->isEmpty()) {
-        std::cout << "No elements\n";
+        std::cout << "Dictionary is empry\n";
+        throw std::exception();
     } else {
-        DictionaryTree<Key, Value>* temp = node;
-        while (temp != nullptr) {
-            std::cout << temp->selfKey << " -> " << temp->value << "\n";
-            temp = temp->next;
+        dictionaryTree->updateValue(key, newValue);
+    }
+}
+
+template<class Key, class Value>
+Sequence<Key> *Dictionary<Key, Value>::keyList() {
+    if (this->isEmpty()) {
+        return new LinkedListSequence<Key>();
+    } else {
+        return dictionaryTree->keyList();
+    }
+}
+
+template<class Key, class Value>
+void Dictionary<Key, Value>::print(std::string order) {
+    if (this->isEmpty()) {
+        std::cout << "Empty dictionary\n\n";
+    } else {
+        Sequence<std::pair<Key, Value>> *sequenceTree = dictionaryTree->thread(order);
+        for (int i = 0; i < sequenceTree->getLength(); i++) {
+            std::cout << sequenceTree->get(i).first << " --> " << sequenceTree->get(i).second << "\n";
         }
     }
 }
 
 template<class Key, class Value>
-Dictionary<Key, Value>::Dictionary(const Dictionary<Key,Value> &dictionary) {
-    this->node = new DictionaryTree<Key, Value>(*dictionary.node);
-}
-
-template<class Key, class Value>
-bool Dictionary<Key, Value>::containsNullValue(bool (*isNull)(Value)) {
-    DictionaryTree<Key, Value> *temp = this->node;
-    while (temp != nullptr && !isNull(temp->value)) {
-        temp = temp->next;
+void Dictionary<Key, Value>::remove(Key key) {
+    if (this->isEmpty()) {
+        std::cout << "There's no such key in dictionary\n";
+        throw std::exception();
+    } else {
+        dictionaryTree->remove(key);
     }
-
-    return temp != nullptr;
 }

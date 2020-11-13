@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
+string
+-
+../Dictionary/Dictionary.cpp
+C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp
+
 C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp
 exception
 -
@@ -15,20 +21,20 @@ Dictionary.h
 C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
 
 C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
+../DictionaryTree/DictionaryTree.cpp
+C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp
 
-C:/Users/fell2/CLionProjects/proglab2/Iterator/IIterator.h
-
-C:/Users/fell2/CLionProjects/proglab2/Iterator/SeqIterator.cpp
-exception
+C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp
+iostream
 -
-SeqIterator.h
-C:/Users/fell2/CLionProjects/proglab2/Iterator/SeqIterator.h
+DictionaryTree.h
+C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.h
 
-C:/Users/fell2/CLionProjects/proglab2/Iterator/SeqIterator.h
-IIterator.h
-C:/Users/fell2/CLionProjects/proglab2/Iterator/IIterator.h
-../Sequence/Sequence.h
-C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
+C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.h
+utility
+-
+../Sequence/LinkedListSequence/LinkedListSequence.cpp
+C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
 
 C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.cpp
 ArraySequence.h
@@ -65,14 +71,12 @@ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/Lin
 C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
 LinkedListSequence.h
 C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
-LinkedList/LinkedList.cpp
-C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp
 
 C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
 ../Sequence.h
 C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
-LinkedList/LinkedList.h
-C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.h
+LinkedList/LinkedList.cpp
+C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp
 
 C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
 
@@ -83,24 +87,24 @@ C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h
 C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h
 functional
 -
-../Dictionary/Dictionary.cpp
-C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp
-../Sequence/Sequence.h
-C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
-../Sequence/ArraySequence/ArraySequence.h
-C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.h
-../Iterator/SeqIterator.cpp
-C:/Users/fell2/CLionProjects/proglab2/Iterator/SeqIterator.cpp
+../Dictionary/Dictionary.h
+C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
+../Sequence/ArraySequence/ArraySequence.cpp
+C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.cpp
 
 C:/Users/fell2/CLionProjects/proglab2/main.cpp
 iostream
 -
-Sequence/Sequence.h
-C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
-Sequence/ArraySequence/ArraySequence.cpp
-C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.cpp
-Sequence/LinkedListSequence/LinkedListSequence.cpp
-C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
+fstream
+-
+random
+-
+ctime
+-
+windows.h
+-
 Sparse/SparseSeq.cpp
 C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp
+AlphabetPointer/AlphabetPointer.h
+C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
 

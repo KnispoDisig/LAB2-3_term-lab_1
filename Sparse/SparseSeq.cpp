@@ -21,7 +21,7 @@ SparseSeq<T>::SparseSeq(Sequence<T> *seq, bool (*isNull)(T), bool mapReduceOn) {
 
 template<class T>
 void SparseSeq<T>::print() {
-    storage->print();
+    storage->print("LNR");
 }
 
 template<class T>

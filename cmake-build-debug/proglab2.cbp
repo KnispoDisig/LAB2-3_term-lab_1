@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.cpp">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h">
+			<Option target="proglab2"/>
+		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/BinTree/BinTree.cpp">
 			<Option target="proglab2"/>
 		</Unit>
@@ -96,6 +102,12 @@
 			<Option target="proglab2"/>
 		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.h">
 			<Option target="proglab2"/>
 		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Iterator/IIterator.h">
