@@ -14,6 +14,9 @@ template<class T>
 class SparseSeq {
 private:
     Dictionary<int, T> *storage = nullptr;
+    int length;
+    T null;
+    bool (*isNull)(T);
 
     template<typename Q>
     Sequence<Q> *map(Sequence<T> *seq, std::function<Q(T)> f);
@@ -21,17 +24,25 @@ private:
     template<typename Q>
     Q reduce(Sequence<Q>* seq, std::function<Q(Q, Q)> f);
 
-    Sequence<Dictionary<int, T>*> *indexing(Sequence<T> *seq);      // работает как map, только именно для данной задачи
+    // работает как map, только именно для данной задачи
+    // мы не можем использовать map, так как map предполагает
+    // что функция, передаваемая в качестве параметра является чистой, что в данной задаче не может быть реализовано
+    // вследствие необходимости знать индекс элемента в последовательности
+    Sequence<Dictionary<int, T>*> *indexing(Sequence<T> *seq);
 
     static std::function<Dictionary<int, T>*(Dictionary<int, T>*, Dictionary<int, T>*)> reducingFunction(bool (*isNull)(T));
 
 public:
 
-    SparseSeq(Sequence<T> *seq, bool (*isNull)(T), bool mapReduceOn = false);
+    SparseSeq(Sequence<T> *seq, T null, bool (*isNull)(T), bool mapReduceOn = false);
 
     SparseSeq(const SparseSeq<T> &seq);
 
-    void print();
+    int getLength();
+
+    T get(int index);
+
+    T getNull();
 };
 
 

@@ -80,6 +80,30 @@ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/Lin
 
 C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
 
+C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp
+iostream
+-
+SortedSequence.h
+C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h
+
+C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h
+../Sorter/Sorter.h
+C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h
+
+C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h
+
+C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h
+../Sequence/LinkedListSequence/LinkedListSequence.h
+C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
+../Sequence/ArraySequence/ArraySequence.h
+C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.h
+chrono
+-
+utility
+-
+Ordering.h
+C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h
+
 C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp
 SparseSeq.h
 C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h
@@ -91,6 +115,12 @@ functional
 C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
 ../Sequence/ArraySequence/ArraySequence.cpp
 C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.cpp
+
+C:/Users/fell2/CLionProjects/proglab2/Test.h
+SortedSequence/SortedSequence.cpp
+C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp
+AlphabetPointer/AlphabetPointer.h
+C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
 
 C:/Users/fell2/CLionProjects/proglab2/main.cpp
 iostream
@@ -105,6 +135,6 @@ windows.h
 -
 Sparse/SparseSeq.cpp
 C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp
-AlphabetPointer/AlphabetPointer.h
-C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
+Test.h
+C:/Users/fell2/CLionProjects/proglab2/Test.h
 

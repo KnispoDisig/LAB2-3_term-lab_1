@@ -39,7 +39,6 @@ bool Dictionary<Key, Value>::isEmpty() {
 template<class Key, class Value>
 Value Dictionary<Key, Value>::get(Key key) {
     if (this->isEmpty()) {
-        std::cout << "Dictionary is empty\n";
         throw std::exception();
     } else {
         return dictionaryTree->get(key);
@@ -106,7 +105,7 @@ Dictionary<Key, Value> *Dictionary<Key, Value>::concat(Dictionary<Key, Value> *d
 template<class Key, class Value>
 void Dictionary<Key, Value>::updateValue(Key key, Value newValue) {
     if (this->isEmpty()) {
-        std::cout << "Dictionary is empry\n";
+        std::cout << "Dictionary is empty\n";
         throw std::exception();
     } else {
         dictionaryTree->updateValue(key, newValue);
@@ -123,21 +122,9 @@ Sequence<Key> *Dictionary<Key, Value>::keyList() {
 }
 
 template<class Key, class Value>
-void Dictionary<Key, Value>::print(std::string order) {
-    if (this->isEmpty()) {
-        std::cout << "Empty dictionary\n\n";
-    } else {
-        Sequence<std::pair<Key, Value>> *sequenceTree = dictionaryTree->thread(order);
-        for (int i = 0; i < sequenceTree->getLength(); i++) {
-            std::cout << sequenceTree->get(i).first << " --> " << sequenceTree->get(i).second << "\n";
-        }
-    }
-}
-
-template<class Key, class Value>
 void Dictionary<Key, Value>::remove(Key key) {
     if (this->isEmpty()) {
-        std::cout << "There's no such key in dictionary\n";
+        std::cout << "Empty dictionary\n";
         throw std::exception();
     } else {
         dictionaryTree->remove(key);

@@ -212,6 +212,32 @@ CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fell2\CLionProjects\proglab2\DictionaryTree\DictionaryTree.cpp -o CMakeFiles\proglab2.dir\DictionaryTree\DictionaryTree.cpp.s
 
+CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj: CMakeFiles/proglab2.dir/flags.make
+CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj: ../SortedSequence/SortedSequence.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\fell2\CLionProjects\proglab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proglab2.dir\SortedSequence\SortedSequence.cpp.obj -c C:\Users\fell2\CLionProjects\proglab2\SortedSequence\SortedSequence.cpp
+
+CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fell2\CLionProjects\proglab2\SortedSequence\SortedSequence.cpp > CMakeFiles\proglab2.dir\SortedSequence\SortedSequence.cpp.i
+
+CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fell2\CLionProjects\proglab2\SortedSequence\SortedSequence.cpp -o CMakeFiles\proglab2.dir\SortedSequence\SortedSequence.cpp.s
+
+CMakeFiles/proglab2.dir/Test.cpp.obj: CMakeFiles/proglab2.dir/flags.make
+CMakeFiles/proglab2.dir/Test.cpp.obj: ../Test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\fell2\CLionProjects\proglab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/proglab2.dir/Test.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proglab2.dir\Test.cpp.obj -c C:\Users\fell2\CLionProjects\proglab2\Test.cpp
+
+CMakeFiles/proglab2.dir/Test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proglab2.dir/Test.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\fell2\CLionProjects\proglab2\Test.cpp > CMakeFiles\proglab2.dir\Test.cpp.i
+
+CMakeFiles/proglab2.dir/Test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proglab2.dir/Test.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\fell2\CLionProjects\proglab2\Test.cpp -o CMakeFiles\proglab2.dir\Test.cpp.s
+
 # Object files for target proglab2
 proglab2_OBJECTS = \
 "CMakeFiles/proglab2.dir/main.cpp.obj" \
@@ -225,7 +251,9 @@ proglab2_OBJECTS = \
 "CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj" \
 "CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.obj" \
 "CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj" \
-"CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj"
+"CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj" \
+"CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj" \
+"CMakeFiles/proglab2.dir/Test.cpp.obj"
 
 # External object files for target proglab2
 proglab2_EXTERNAL_OBJECTS =
@@ -242,11 +270,13 @@ proglab2.exe: CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj
 proglab2.exe: CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.obj
 proglab2.exe: CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj
 proglab2.exe: CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj
+proglab2.exe: CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj
+proglab2.exe: CMakeFiles/proglab2.dir/Test.cpp.obj
 proglab2.exe: CMakeFiles/proglab2.dir/build.make
 proglab2.exe: CMakeFiles/proglab2.dir/linklibs.rsp
 proglab2.exe: CMakeFiles/proglab2.dir/objects1.rsp
 proglab2.exe: CMakeFiles/proglab2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\fell2\CLionProjects\proglab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable proglab2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\fell2\CLionProjects\proglab2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable proglab2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\proglab2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

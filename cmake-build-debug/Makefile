@@ -392,6 +392,33 @@ Sequence/LinkedListSequence/LinkedListSequence.cpp.s:
 	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Sequence/LinkedListSequence/LinkedListSequence.cpp.s
 .PHONY : Sequence/LinkedListSequence/LinkedListSequence.cpp.s
 
+SortedSequence/SortedSequence.obj: SortedSequence/SortedSequence.cpp.obj
+
+.PHONY : SortedSequence/SortedSequence.obj
+
+# target to build an object file
+SortedSequence/SortedSequence.cpp.obj:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj
+.PHONY : SortedSequence/SortedSequence.cpp.obj
+
+SortedSequence/SortedSequence.i: SortedSequence/SortedSequence.cpp.i
+
+.PHONY : SortedSequence/SortedSequence.i
+
+# target to preprocess a source file
+SortedSequence/SortedSequence.cpp.i:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.i
+.PHONY : SortedSequence/SortedSequence.cpp.i
+
+SortedSequence/SortedSequence.s: SortedSequence/SortedSequence.cpp.s
+
+.PHONY : SortedSequence/SortedSequence.s
+
+# target to generate assembly for a file
+SortedSequence/SortedSequence.cpp.s:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.s
+.PHONY : SortedSequence/SortedSequence.cpp.s
+
 Sparse/SparseSeq.obj: Sparse/SparseSeq.cpp.obj
 
 .PHONY : Sparse/SparseSeq.obj
@@ -418,6 +445,33 @@ Sparse/SparseSeq.s: Sparse/SparseSeq.cpp.s
 Sparse/SparseSeq.cpp.s:
 	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.s
 .PHONY : Sparse/SparseSeq.cpp.s
+
+Test.obj: Test.cpp.obj
+
+.PHONY : Test.obj
+
+# target to build an object file
+Test.cpp.obj:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Test.cpp.obj
+.PHONY : Test.cpp.obj
+
+Test.i: Test.cpp.i
+
+.PHONY : Test.i
+
+# target to preprocess a source file
+Test.cpp.i:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Test.cpp.i
+.PHONY : Test.cpp.i
+
+Test.s: Test.cpp.s
+
+.PHONY : Test.s
+
+# target to generate assembly for a file
+Test.cpp.s:
+	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/Test.cpp.s
+.PHONY : Test.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -485,9 +539,15 @@ help:
 	@echo ... Sequence/LinkedListSequence/LinkedListSequence.obj
 	@echo ... Sequence/LinkedListSequence/LinkedListSequence.i
 	@echo ... Sequence/LinkedListSequence/LinkedListSequence.s
+	@echo ... SortedSequence/SortedSequence.obj
+	@echo ... SortedSequence/SortedSequence.i
+	@echo ... SortedSequence/SortedSequence.s
 	@echo ... Sparse/SparseSeq.obj
 	@echo ... Sparse/SparseSeq.i
 	@echo ... Sparse/SparseSeq.s
+	@echo ... Test.obj
+	@echo ... Test.i
+	@echo ... Test.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

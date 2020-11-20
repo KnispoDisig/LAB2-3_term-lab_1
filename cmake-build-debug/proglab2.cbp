@@ -146,10 +146,28 @@
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h">
 			<Option target="proglab2"/>
 		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h">
+			<Option target="proglab2"/>
+		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp">
 			<Option target="proglab2"/>
 		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Test.cpp">
+			<Option target="proglab2"/>
+		</Unit>
+		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/Test.h">
 			<Option target="proglab2"/>
 		</Unit>
 		<Unit filename="C:/Users/fell2/CLionProjects/proglab2/main.cpp">

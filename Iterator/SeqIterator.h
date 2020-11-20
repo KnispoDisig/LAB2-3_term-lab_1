@@ -15,11 +15,11 @@ private:
 public:
     explicit SeqIterator(Sequence<T>* seq);
 
-    T getCurrentItem();
+    T getCurrentItem() override;
 
-    bool hasNext();
+    bool hasNext() override;
 
-    bool next();
+    bool next() override;
 
     bool tryGetCurrentItem(T& elem);
 

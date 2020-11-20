@@ -71,6 +71,17 @@ CMakeFiles/proglab2.dir/Sequence/LinkedListSequence/LinkedListSequence.cpp.obj
  C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
  C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
  C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
+CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/DynamicArray/DynamicArray.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h
 CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.obj
  C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
  C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp
@@ -86,6 +97,25 @@ CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.obj
  C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
  C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp
  C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h
+CMakeFiles/proglab2.dir/Test.cpp.obj
+ C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
+ C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp
+ C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.h
+ C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp
+ C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/ArraySequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/DynamicArray/DynamicArray.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h
+ C:/Users/fell2/CLionProjects/proglab2/Test.cpp
+ C:/Users/fell2/CLionProjects/proglab2/Test.h
 CMakeFiles/proglab2.dir/main.cpp.obj
  C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.h
  C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp
@@ -101,6 +131,11 @@ CMakeFiles/proglab2.dir/main.cpp.obj
  C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp
  C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.h
  C:/Users/fell2/CLionProjects/proglab2/Sequence/Sequence.h
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp
+ C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Ordering.h
+ C:/Users/fell2/CLionProjects/proglab2/Sorter/Sorter.h
  C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp
  C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.h
+ C:/Users/fell2/CLionProjects/proglab2/Test.h
  C:/Users/fell2/CLionProjects/proglab2/main.cpp

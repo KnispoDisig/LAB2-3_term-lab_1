@@ -56,7 +56,6 @@ public:
 
     Sequence<std::pair<Key, Value>> *thread(std::string order);
 
-    void print();
 };
 
 

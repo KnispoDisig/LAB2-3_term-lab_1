@@ -4,7 +4,11 @@
 #include "SparseSeq.h"
 
 template<class T>
-SparseSeq<T>::SparseSeq(Sequence<T> *seq, bool (*isNull)(T), bool mapReduceOn) {
+SparseSeq<T>::SparseSeq(Sequence<T> *seq, T null, bool (*isNull)(T), bool mapReduceOn) {
+    length = seq->getLength();
+    this->null = null;
+    this->isNull = isNull;
+
     if (!mapReduceOn) {
         for (int i = 0; i < seq->getLength(); i++) {
             if (!isNull(seq->get(i))) {
@@ -17,11 +21,6 @@ SparseSeq<T>::SparseSeq(Sequence<T> *seq, bool (*isNull)(T), bool mapReduceOn) {
     } else {
         storage = reduce<Dictionary<int, T>*>(indexing(seq), reducingFunction(isNull));
     }
-}
-
-template<class T>
-void SparseSeq<T>::print() {
-    storage->print("LNR");
 }
 
 template<class T>
@@ -67,6 +66,7 @@ Sequence<Dictionary<int, T>*> *SparseSeq<T>::indexing(Sequence<T> *seq) {
     }
 
     return result->getSubsequence(1, result->getLength() - 1);
+
 }
 
 template<class T>
@@ -83,3 +83,24 @@ SparseSeq<T>::reducingFunction(bool (*isNull)(T)) {
     };
 }
 
+template<class T>
+int SparseSeq<T>::getLength() {
+    return length;
+}
+
+template<class T>
+T SparseSeq<T>::get(int index) {
+    T elem;
+    try {
+        elem = storage->get(index);
+    } catch (...) {
+        elem = null;
+    }
+
+    return elem;
+}
+
+template<class T>
+T SparseSeq<T>::getNull() {
+    return null;
+}

@@ -4,12 +4,22 @@
 #include <ctime>
 #include <windows.h>
 #include "Sparse/SparseSeq.cpp"
-#include "AlphabetPointer/AlphabetPointer.h"
+#include "Test.h"
 
 using namespace std;
 
 bool intIsNull(int i) {
     return i == 0;
+}
+
+int int_ascending(int n1, int n2) {
+    if (n1 > n2) {
+        return 1;
+    } else if (n1 == n2) {
+        return 0;
+    } else {
+        return -1;
+    }
 }
 
 int generateInt(int probability) {
@@ -23,7 +33,7 @@ int generateInt(int probability) {
     }
 }
 
-string getText() {
+string get_text_from_file() {
     string text;
     ifstream myfile (R"(C:\Users\fell2\CLionProjects\proglab2\text.txt)");
     while (myfile.good()) {
@@ -35,60 +45,216 @@ string getText() {
     return text;
 }
 
-int main() {
-//    DictionaryTree<int, int> *tree = new DictionaryTree<int, int>(10, 100);
-//    tree->add(5, 10);
-//    tree->add(7, 10);
-//    tree->add(-6, 9);
-//    tree->add(70, 12);
-//    tree->add(100, 101);
-//
-//    DictionaryTree<int, int> *tree1 = new DictionaryTree<int, int>(-1, 1);
-//    tree1->add(2, 1);
-//    tree1->add(-3, 1);
-//    tree1->add(10, 10);
-//    tree1->add(150, 12);
-//
-//    Dictionary<int, int> *dictionary = new Dictionary<int, int>();
-//    dictionary->add(5, 1);
-//    dictionary->add(3, 2);
-//    dictionary->add(1, 3);
-//    dictionary->add(4, 4);
-//    dictionary->add(2, 5);
-//    dictionary->add(8, 6);
-//    dictionary->add(10, 7);
-//    dictionary->add(6, 8);
-//
-//    dictionary->remove(5);
-//
-//    dictionary->print("NLR");
-    srand(time(NULL));
-    Sequence<int> *sequence = new LinkedListSequence<int>();
-    int countNoNull = 0;
+void print_art() {
+    std::cout << R"(
+  _           _       _  _  ___             _                  _ _   _
+ | |         | |    _| || ||__ \      /\   | |                (_) | | |
+ | |     __ _| |__ |_  __  _| ) |    /  \  | | __ _  ___  _ __ _| |_| |__  _ __ ___  ___
+ | |    / _` | '_ \ _| || |_ / /    / /\ \ | |/ _` |/ _ \| '__| | __| '_ \| '_ ` _ \/ __|
+ | |___| (_| | |_) |_  __  _/ /_   / ____ \| | (_| | (_) | |  | | |_| | | | | | | | \__ \
+ |______\__,_|_.__/  |_||_||____| /_/    \_\_|\__, |\___/|_|  |_|\__|_| |_|_| |_| |_|___/
+                                               __/ |
+                                              |___/                                      )" << "\n\n";
+}
 
-    for (int i = 0; i < 1000; i++) {
-        int j = generateInt(20);
-        if (j != 0) {
-            countNoNull++;
-        }
-        sequence->prepend(j);
+string firstWord(string str) {
+    std::string word;
+    int i = 0;
+    while (str[i] != ' ' && i != str.length()) {
+        word += str[i];
+        i++;
     }
+    return word;
+}
 
+void removeFirstWord(string *str) {
+    int i = 0;
+    while ((*str)[i] != ' ' && i != (*str).length()) {
+        i++;
+    }
+    if (i == (*str).length()) {
+        (*str) = "";
+    } else {
+        (*str).erase(0, i + 1);
+    }
+}
 
+void println(string str) {
+    std::cout << str << "\n";
+}
 
-    unsigned int start_time = GetTickCount();
-    SparseSeq<int> *sparseSeq1 = new SparseSeq<int>(sequence, intIsNull);
-    unsigned int end_time =  GetTickCount();
-    std::cout << end_time - start_time << "\n";
+void print_info() {
+    println("test  -  launch all tests");
+    println("sparse (option) -  make sparse sequence (option == generate or option == custom)");
+    println("alphabet (option) -  make alphabet pointer (option == file or option == custom)");
 
-    start_time = GetTickCount();
-    SparseSeq<int> *sparseSeq2 = new SparseSeq<int>(sequence, intIsNull, true);
-    end_time = GetTickCount();
-    std::cout << end_time - start_time << "\n";
+    println("exit  -  exit the program");
+}
 
-    AlphabetPointer *alphabetPointer = new AlphabetPointer(getText(), 50);
+int main() {
+    const int PROBABILITY_NOT_NULL = 15;
+    const int COUNT_GENERATED = 500;
+    string request;
+    print_art();
 
-    alphabetPointer->print();
+    while (firstWord(request) != "exit") {
+        print_info();
+        getline(cin, request);
+        string command = firstWord(request);
 
+        if (command == "test") {
+            Test::launchAllTests();
+        } else if (command == "sparse") {
+            string option;
+            removeFirstWord(&request);
+            try {
+                option = firstWord(request);
+            } catch (...) {
+                println("Something went wrong. Enter proper value for option\n");
+                continue;
+            }
+            if (option == "generate") {
+                Sequence<int> *baseSequence = new LinkedListSequence<int>();
+                println("** GENERATED SEQUENCE **");
+                int count_not_null = 0;
+                for (int i = 0; i < COUNT_GENERATED; i++) {
+                    int n = generateInt(PROBABILITY_NOT_NULL);
+                    count_not_null += n != 0;
+                    baseSequence->prepend(n);
+                    std::cout << n << " ";
+                }
+                std::cout << "\nElements count: " << COUNT_GENERATED << "; Not-null elements: " << count_not_null;
+                std::cout << "\n" << 100 - ((count_not_null * 100) / (COUNT_GENERATED)) << "% is nulls";
+                std::cout << "\n\n";
+
+                println("** SPARSE SEQUENCE **");
+                int usual_duration;
+                unsigned int start_time = clock();
+                SparseSeq<int> *sparseSeq = new SparseSeq<int>(baseSequence, 0, intIsNull);
+                usual_duration = clock() - start_time;
+
+                int mapReduce_duration;
+                start_time = clock();
+                SparseSeq<int> *sparseSeqMapReduce = new SparseSeq<int>(baseSequence, 0, intIsNull, true);
+                mapReduce_duration = clock() - start_time;
+
+                for (int i = 0; i < sparseSeq->getLength(); i++) {
+                    int elem = sparseSeq->get(i);
+                    if (elem != sparseSeq->getNull()) {
+                        std::cout << i << " -> " << elem << "\n";
+                    }
+                }
+
+                std::cout << "Usual processing time: " << usual_duration << " ms\n";
+                std::cout << "MapReduce processing time: " << mapReduce_duration << " ms\n\n";
+
+            } else if (option == "custom") {
+                int elem_count = 0;
+
+                bool read_count_ok = true;
+                do {
+                    println("Enter count of elements: \n");
+                    string count;
+                    getline(cin, count);
+                    try {
+                        elem_count = std::stoi(count);
+                        read_count_ok = false;
+                    } catch (...) {
+                        println("Something went wrong, try again\n");
+                    }
+                } while (read_count_ok);
+
+                Sequence<int> *sequence = new LinkedListSequence<int>();
+                bool enter_seq_ok = true;
+                do {
+
+                    println("Enter your custom sequence of integers\nExample: 0 0 0 0 1 0 -3 0\n");
+                    string str;
+                    getline(cin, str);
+                    try {
+                        for (int i = 0; i < elem_count; i++) {
+                            sequence->prepend(stoi(firstWord(str)));
+                            removeFirstWord(&str);
+                        }
+                        enter_seq_ok = false;
+                    } catch (...) {
+                        sequence = new LinkedListSequence<int>();
+                        println("Something went wrong, try again\n");
+                    }
+                } while (enter_seq_ok);
+
+                println("** SPARSE SEQUENCE **");
+                SparseSeq<int> *sparseSeq = new SparseSeq<int>(sequence, 0, intIsNull);
+                for (int i = 0; i < sparseSeq->getLength(); i++) {
+                    int elem = sparseSeq->get(i);
+                    if (elem != sparseSeq->getNull()) {
+                        std::cout << i << " -> " << elem << "\n";
+                    }
+                }
+                std::cout << "\n";
+            } else {
+                println("Something went wrong. Enter proper value for option\n");
+                continue;
+            }
+        } else if (command == "alphabet") {
+            string option;
+            removeFirstWord(&request);
+            option = firstWord(request);
+
+            if (option == "file") {
+                string text = get_text_from_file();
+                int page_size;
+
+                bool page_size_read_ok = true;
+                do {
+                    println("Enter the size of one page:");
+                    string input;
+                    getline(cin, input);
+                    try {
+                        page_size = stoi(input);
+                        page_size_read_ok = false;
+                    } catch (...) {
+                        println("Something went wrong, try again\n");
+                    }
+                } while (page_size_read_ok);
+
+                cout << "Input text:\n" << text << "\n";
+
+                AlphabetPointer *alphabetPointer = new AlphabetPointer(text, page_size);
+                std::cout << "\nCreated alphabet pointer:\n";
+                alphabetPointer->print();
+                println("");
+
+            } else if (option == "custom") {
+                string custom_text;
+                int page_size;
+
+                std::cout << "Enter your text:\n";
+                getline(cin, custom_text);
+
+                bool page_size_read_ok = true;
+                do {
+                    println("Enter the size of one page:");
+                    string input;
+                    getline(cin, input);
+                    try {
+                        page_size = stoi(input);
+                        page_size_read_ok = false;
+                    } catch (...) {
+                        println("Something went wrong, try again\n");
+                    }
+                } while (page_size_read_ok);
+
+                AlphabetPointer *alphabetPointer = new AlphabetPointer(custom_text, page_size);
+                std::cout << "\nCreated alphabet pointer:\n";
+                alphabetPointer->print();
+                println("");
+
+            } else {
+                println("Something went wrong. Enter proper value for option\n");
+                continue;
+            }
+        }
+    }
 
 }

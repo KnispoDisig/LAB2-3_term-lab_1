@@ -14,7 +14,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/fell2/CLionProjects/proglab2/Sequence/ArraySequence/DynamicArray/DynamicArray.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Sequence/ArraySequence/DynamicArray/DynamicArray.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Sequence/LinkedListSequence/LinkedList/LinkedList.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/Sequence/LinkedListSequence/LinkedListSequence.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Sequence/LinkedListSequence/LinkedListSequence.cpp.obj"
+  "C:/Users/fell2/CLionProjects/proglab2/SortedSequence/SortedSequence.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/SortedSequence/SortedSequence.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/Sparse/SparseSeq.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Sparse/SparseSeq.cpp.obj"
+  "C:/Users/fell2/CLionProjects/proglab2/Test.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Test.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/main.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

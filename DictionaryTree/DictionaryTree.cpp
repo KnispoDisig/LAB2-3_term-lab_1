@@ -37,28 +37,6 @@ void DictionaryTree<Key, Value>::add(Key k, Value val) {
     }
 }
 
-
-
-template<class Key, class Value>
-void DictionaryTree<Key, Value>::print() {
-    DictionaryTree<Key, Value> *temp = this;
-
-    if (temp->left == nullptr && temp->right == nullptr) {
-        std::cout << temp->selfKey << " --> " << temp->value << "\n";
-        return;
-    }
-
-    if (temp->left != nullptr) {
-        temp->left->print();
-    }
-
-    std::cout << temp->selfKey << " --> " << temp->value << "\n";
-
-    if (temp->right != nullptr) {
-        temp->right->print();
-    }
-}
-
 template<class Key, class Value>
 bool DictionaryTree<Key, Value>::contains(Key key) {
     DictionaryTree<Key, Value> *temp = this;
@@ -95,7 +73,6 @@ Value DictionaryTree<Key, Value>::get(Key key) {
             return temp->right->get(key);
         }
     } else {
-        std::cout << "No element found in dictionary\n";
         throw std::exception();
     }
 }

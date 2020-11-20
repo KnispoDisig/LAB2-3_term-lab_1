@@ -1,14 +1,11 @@
 //
 // Created by fell2 on 16.10.2020.
 //
-
-#include "../DictionaryTree/DictionaryTree.cpp"
-
-
+#pragma once
 #ifndef PROGLAB2_DICTIONARY_H
 #define PROGLAB2_DICTIONARY_H
 
-#pragma once
+#include "../DictionaryTree/DictionaryTree.cpp"
 
 template<class Key, class Value>
 class Dictionary {
@@ -42,7 +39,6 @@ public:
 
     Sequence<std::pair<Key, Value>> *listOfPairs();
 
-    void print(std::string order);
 };
 
 
