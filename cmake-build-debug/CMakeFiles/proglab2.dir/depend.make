@@ -13,23 +13,6 @@ CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj: ../Sequence/Lin
 CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj: ../Sequence/LinkedListSequence/LinkedListSequence.h
 CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj: ../Sequence/Sequence.h
 
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../BinTree/BinTree.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../BinTree/BinTree.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../BinTree/TreeNode/TreeNode.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../BinTree/TreeNode/TreeNode.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/ArraySequence/ArraySequence.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/ArraySequence/ArraySequence.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/ArraySequence/DynamicArray/DynamicArray.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/ArraySequence/DynamicArray/DynamicArray.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/LinkedListSequence/LinkedList/LinkedList.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/LinkedListSequence/LinkedList/LinkedList.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/LinkedListSequence/LinkedListSequence.cpp
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/LinkedListSequence/LinkedListSequence.h
-CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj: ../Sequence/Sequence.h
-
-CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.obj: ../BinTree/TreeNode/TreeNode.cpp
-CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.obj: ../BinTree/TreeNode/TreeNode.h
-
 CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj: ../Dictionary/Dictionary.cpp
 CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj: ../Dictionary/Dictionary.h
 CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj: ../DictionaryTree/DictionaryTree.cpp

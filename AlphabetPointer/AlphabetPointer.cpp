@@ -148,19 +148,20 @@ AlphabetPointer::AlphabetPointer(const string& str, int pageSize, bool inChars) 
 }
 
 void AlphabetPointer::print() {
-    Sequence<string> *keyList = storage->keyList();
+    Sequence<std::pair<string, Sequence<int>*>> *valuesSequence = storage->listOfPairs();
 
-    for (int i = 0; i < keyList->getLength(); i++) {
-        std::cout << " - " << keyList->get(i) << ": pages (";
-        Sequence<int> *listOfPages = storage->get(keyList->get(i));
+    for (int i = 0; i < valuesSequence->getLength(); i++) {
+        string word = valuesSequence->get(i).first;
+        Sequence<int> *pages = valuesSequence->get(i).second;
 
-        for (int j = 0; j < listOfPages->getLength(); j++) {
-            std::cout << listOfPages->get(j);
-            if (j != listOfPages->getLength() - 1) {
+        std::cout << i << ") " << word << " --> ( ";
+        for (int j = 0; j < pages->getLength(); j++) {
+            std::cout << pages->get(j);
+            if (j != pages->getLength() - 1) {
                 std::cout << ", ";
+            } else {
+                std::cout << " )\n";
             }
         }
-
-        std::cout << ")\n";
     }
 }

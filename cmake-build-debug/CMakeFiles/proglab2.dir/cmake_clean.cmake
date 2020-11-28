@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj"
-  "CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj"
-  "CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.obj"
   "CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj"
   "CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj"
   "CMakeFiles/proglab2.dir/Iterator/SeqIterator.cpp.obj"

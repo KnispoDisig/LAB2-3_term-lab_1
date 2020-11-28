@@ -27,7 +27,7 @@ Sequence<std::pair<Key, Value>> *Dictionary<Key, Value>::listOfPairs() {
     if (this->isEmpty()) {
         return new LinkedListSequence<std::pair<Key, Value>>();
     } else {
-        return dictionaryTree->thread("NLR");
+        return dictionaryTree->thread("LNR");
     }
 }
 

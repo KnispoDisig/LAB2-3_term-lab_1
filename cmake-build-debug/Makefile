@@ -149,60 +149,6 @@ AlphabetPointer/AlphabetPointer.cpp.s:
 	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.s
 .PHONY : AlphabetPointer/AlphabetPointer.cpp.s
 
-BinTree/BinTree.obj: BinTree/BinTree.cpp.obj
-
-.PHONY : BinTree/BinTree.obj
-
-# target to build an object file
-BinTree/BinTree.cpp.obj:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj
-.PHONY : BinTree/BinTree.cpp.obj
-
-BinTree/BinTree.i: BinTree/BinTree.cpp.i
-
-.PHONY : BinTree/BinTree.i
-
-# target to preprocess a source file
-BinTree/BinTree.cpp.i:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.i
-.PHONY : BinTree/BinTree.cpp.i
-
-BinTree/BinTree.s: BinTree/BinTree.cpp.s
-
-.PHONY : BinTree/BinTree.s
-
-# target to generate assembly for a file
-BinTree/BinTree.cpp.s:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.s
-.PHONY : BinTree/BinTree.cpp.s
-
-BinTree/TreeNode/TreeNode.obj: BinTree/TreeNode/TreeNode.cpp.obj
-
-.PHONY : BinTree/TreeNode/TreeNode.obj
-
-# target to build an object file
-BinTree/TreeNode/TreeNode.cpp.obj:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.obj
-.PHONY : BinTree/TreeNode/TreeNode.cpp.obj
-
-BinTree/TreeNode/TreeNode.i: BinTree/TreeNode/TreeNode.cpp.i
-
-.PHONY : BinTree/TreeNode/TreeNode.i
-
-# target to preprocess a source file
-BinTree/TreeNode/TreeNode.cpp.i:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.i
-.PHONY : BinTree/TreeNode/TreeNode.cpp.i
-
-BinTree/TreeNode/TreeNode.s: BinTree/TreeNode/TreeNode.cpp.s
-
-.PHONY : BinTree/TreeNode/TreeNode.s
-
-# target to generate assembly for a file
-BinTree/TreeNode/TreeNode.cpp.s:
-	$(MAKE) -f CMakeFiles\proglab2.dir\build.make CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.s
-.PHONY : BinTree/TreeNode/TreeNode.cpp.s
-
 Dictionary/Dictionary.obj: Dictionary/Dictionary.cpp.obj
 
 .PHONY : Dictionary/Dictionary.obj
@@ -512,12 +458,6 @@ help:
 	@echo ... AlphabetPointer/AlphabetPointer.obj
 	@echo ... AlphabetPointer/AlphabetPointer.i
 	@echo ... AlphabetPointer/AlphabetPointer.s
-	@echo ... BinTree/BinTree.obj
-	@echo ... BinTree/BinTree.i
-	@echo ... BinTree/BinTree.s
-	@echo ... BinTree/TreeNode/TreeNode.obj
-	@echo ... BinTree/TreeNode/TreeNode.i
-	@echo ... BinTree/TreeNode/TreeNode.s
 	@echo ... Dictionary/Dictionary.obj
 	@echo ... Dictionary/Dictionary.i
 	@echo ... Dictionary/Dictionary.s

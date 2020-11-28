@@ -5,8 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/fell2/CLionProjects/proglab2/AlphabetPointer/AlphabetPointer.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/AlphabetPointer/AlphabetPointer.cpp.obj"
-  "C:/Users/fell2/CLionProjects/proglab2/BinTree/BinTree.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/BinTree/BinTree.cpp.obj"
-  "C:/Users/fell2/CLionProjects/proglab2/BinTree/TreeNode/TreeNode.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/BinTree/TreeNode/TreeNode.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/Dictionary/Dictionary.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Dictionary/Dictionary.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/DictionaryTree/DictionaryTree.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/DictionaryTree/DictionaryTree.cpp.obj"
   "C:/Users/fell2/CLionProjects/proglab2/Iterator/SeqIterator.cpp" "C:/Users/fell2/CLionProjects/proglab2/cmake-build-debug/CMakeFiles/proglab2.dir/Iterator/SeqIterator.cpp.obj"
